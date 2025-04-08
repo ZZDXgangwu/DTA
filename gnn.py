@@ -59,7 +59,7 @@ class GNNNet(torch.nn.Module):
         xt = self.pro_conv1(target_x, orig_target_edge_index)
         xt = self.relu(xt)
 
-        xt = self.pro_conv2(xt, target_edge_index)
+        xt = self.pro_conv2(xt, orig_target_edge_index)
         xt = self.relu(xt)
 
         xt = self.pro_conv3(xt, target_edge_index)
